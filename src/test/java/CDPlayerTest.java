@@ -9,13 +9,24 @@ public class CDPlayerTest {
     CDPlayer cdPlayer;
 
     @Before
-    public void before(){
+    public void before() {
         cdPlayer = new CDPlayer("Tralalala");
     }
 
     @Test
-    public void canPlay(){
+    public void canPlay() {
         assertEquals("Tralalala", cdPlayer.play());
+    }
+
+    @Test
+    public void canGetWhatsPlaying() {
+        assertEquals("Track 01", cdPlayer.whatsPlaying());
+    }
+
+    @Test
+    public void canGoToNextTrack() {
+        cdPlayer.next();
+        assertEquals("Track 02", cdPlayer.whatsPlaying());
     }
 
 }

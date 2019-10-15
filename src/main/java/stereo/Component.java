@@ -19,7 +19,7 @@ public abstract class Component {
 
     public abstract void next();
     public abstract void previous();
-    public abstract void whatsPlaying();
+    public abstract String whatsPlaying();
 
 
 

@@ -18,15 +18,20 @@ public class CDPlayer extends Component {
     }
 
     public void next() {
-
+        int i = trackList.indexOf(currentTrack);
+        if (i >= trackList.size()) {
+            stop();
+        } else {
+            currentTrack = trackList.get(i + 1);
+        }
     }
 
     public void previous() {
 
     }
 
-    public void whatsPlaying() {
-
+    public String whatsPlaying() {
+        return currentTrack;
     }
 
 }
