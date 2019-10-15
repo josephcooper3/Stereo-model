@@ -11,7 +11,7 @@ public class StereoTest {
 
     @Before
     public void before() {
-        stereo = new Stereo();
+        stereo = new Stereo("Joham");
     }
 
     @Test

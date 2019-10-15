@@ -9,12 +9,14 @@ public class Stereo {
     private int volume;
     private int maxVolume;
     private int minVolume;
+    private String name;
 
-    public Stereo() {
+    public Stereo(String name) {
         sources = new ArrayList<Component>();
         volume = 5;
         maxVolume = 10;
         minVolume = 0;
+        this.name = name;
     }
 
     public void addComponent(Component component) {
@@ -46,5 +48,9 @@ public class Stereo {
 
     public int getVolume() {
         return volume;
+    }
+
+    public String getName() {
+        return name;
     }
 }
