@@ -27,7 +27,10 @@ public class CDPlayer extends Component {
     }
 
     public void previous() {
-
+        int i = trackList.indexOf(currentTrack);
+        if (i != 0){
+            currentTrack = trackList.get(i - 1);
+        }
     }
 
     public String whatsPlaying() {

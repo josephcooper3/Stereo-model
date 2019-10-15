@@ -44,4 +44,18 @@ public class CDPlayerTest {
         assertEquals("Music has stopped.", cdPlayer.stop());
     }
 
+    @Test
+    public void canGoToPreviousTrack() {
+        cdPlayer.next();
+        cdPlayer.next();
+        cdPlayer.previous();
+        assertEquals("Track 02", cdPlayer.whatsPlaying());
+    }
+
+    @Test
+    public void cannotSkipBelow0(){
+        cdPlayer.previous();
+        assertEquals("Track 01", cdPlayer.whatsPlaying());
+    }
+
 }
