@@ -14,12 +14,12 @@ public class CDPlayer extends Component {
 
     public String stop() {
         currentTrack = trackList.get(0);
-        return "Music has stopped.";
+        return super.stop();
     }
 
     public void next() {
         int i = trackList.indexOf(currentTrack);
-        if (i >= trackList.size() - 1) {
+        if (i == trackList.size() - 1) {
             stop();
         } else {
             currentTrack = trackList.get(i + 1);
