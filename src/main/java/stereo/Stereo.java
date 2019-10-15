@@ -18,11 +18,14 @@ public class Stereo {
     }
 
     public void addComponent(Component component) {
+        if (sources.size() == 0) {
+            source = component;
+        }
         sources.add(component);
     }
 
     public Component getSource() {
-        return null;
+        return source;
     }
 
     public void changeSource(Component component) {
