@@ -18,4 +18,16 @@ public class StereoTest {
         assertEquals(5, stereo.getVolume());
     }
 
+    @Test
+    public void canIncreaseVolume() {
+        stereo.increaseVolume();
+        assertEquals(6, stereo.getVolume());
+    }
+
+    @Test
+    public void canDecreaseVolume() {
+        stereo.decreaseVolume();
+        assertEquals(4, stereo.getVolume());
+    }
+
 }
