@@ -29,4 +29,19 @@ public class CDPlayerTest {
         assertEquals("Track 02", cdPlayer.whatsPlaying());
     }
 
+    @Test
+    public void stopsAtEndOfTracks() {
+        cdPlayer.next();
+        cdPlayer.next();
+        cdPlayer.next();
+        cdPlayer.next();
+        cdPlayer.next();
+        assertEquals("Track 01", cdPlayer.whatsPlaying());
+    }
+
+    @Test
+    public void returnsStopMessage() {
+        assertEquals("Music has stopped.", cdPlayer.stop());
+    }
+
 }
